@@ -39,14 +39,14 @@ public class Order implements Serializable{
 		
 	}
 
-	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus ststus) {
+	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
 		super();
 		this.id = id;
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.moment = moment;
-		this.status = ststus;
+		this.status = status;
 	}
 
 	public Long getId() {
@@ -89,12 +89,12 @@ public class Order implements Serializable{
 		this.moment = moment;
 	}
 
-	public OrderStatus getStstus() {
+	public OrderStatus getStatus() {
 		return status;
 	}
 
-	public void setStstus(OrderStatus ststus) {
-		this.status = ststus;
+	public void setStatus(OrderStatus status) {
+		this.status = status;
 	}
 
 	public Set<Product> getProducts() {
@@ -125,5 +125,4 @@ public class Order implements Serializable{
 			return false;
 		return true;
 	}
-	
 }
